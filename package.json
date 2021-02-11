@@ -1,7 +1,17 @@
 {
-  "name": "williamcruz",
-  "version": "0.1.0",
-  "private": true,
+  "name": "williamcruz.ch",
+  "description": "My personal website.",
+  "version": "0.0.0",
+  "author": {
+    "name": "William Cruz",
+    "email": "me@williamcruz.ch",
+    "url": "https://williamcruz.ch"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cruzentwickler/myportfolio.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,6 +20,11 @@
   "dependencies": {
     "next": "10.0.6",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-spring": "^8.0.27",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.12.0"
   }
 }
