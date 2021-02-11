@@ -9,7 +9,6 @@ const Layout = ({ children, ...customMeta }) => {
   const meta = {
     title: 'William Cruz – Developer, writer, creator.',
     description: `Front-end developer, JavaScript enthusiast, and course creator.`,
-    image: 'https://williamcruz.ch/static/images/banner.png',
     type: 'website',
     ...customMeta,
   }
@@ -28,12 +27,6 @@ const Layout = ({ children, ...customMeta }) => {
         <meta property="og:site_name" content="William Cruz" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
-        <meta property="og:image" content={meta.image} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@cruzentwickler" />
-        <meta name="twitter:title" content={meta.title} />
-        <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.image} />
       </Head>
       <Header />
       <main>{children}</main>
