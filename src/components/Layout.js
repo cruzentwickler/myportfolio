@@ -1,38 +1,24 @@
-import React from 'react'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
+import styled from 'styled-components'
 
-const Layout = ({ children, ...customMeta }) => {
-  const router = useRouter()
-  const meta = {
-    title: 'William Cruz – Developer, writer, creator.',
-    description: `Front-end developer, JavaScript enthusiast, and course creator.`,
-    type: 'website',
-    ...customMeta,
-  }
-
+export default function Layout({ children }) {
   return (
-    <>
-      <Head>
-        <title>{meta.title}</title>
-        <meta name="robots" content="follow, index" />
-        <meta content={meta.description} name="description" />
-        <meta
-          property="og:url"
-          content={`https://williamcruz.ch${router.asPath}`}
-        />
-        <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="William Cruz" />
-        <meta property="og:description" content={meta.description} />
-        <meta property="og:title" content={meta.title} />
-      </Head>
-      <Header />
+    <Wrapper>
       <main>{children}</main>
-      <Footer />
-    </>
+    </Wrapper>
   )
 }
 
-export default Layout
+const Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr min(65ch, calc(100% - 64px)) 1fr;
+  grid-gap: 32px;
+
+  > * {
+    grid-column: 2;
+  }
+
+  .full-bleed {
+    width: 100%;
+    grid-column: 1 / -1;
+  }
+`
