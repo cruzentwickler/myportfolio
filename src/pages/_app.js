@@ -1,28 +1,5 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
-
-const GlobalStyle = createGlobalStyle`
-  :root {
-    --color-text: blue;
-    --color-background: lightgray;
-    --color-primary: rebeccapurple;
-  }
-
-  *,
-  *::after,
-  *::before {
-    margin:0;
-    padding: 0;
-    box-sizing: inherit;
-  }
-
-  html {
-    box-sizing: border-box;
-  }
-
-  body {
-    background-color: var(--color-background);
-  }
-`
+import { ThemeProvider } from 'styled-components'
+import { GlobalStyle } from '@/styles/index'
 
 const theme = {}
 
