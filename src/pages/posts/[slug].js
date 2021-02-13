@@ -5,7 +5,7 @@ import renderToString from 'next-mdx-remote/render-to-string'
 import path from 'path'
 
 import Layout from '@/components/Layout'
-import { postFilePaths, POSTS_PATH } from '@/utils/mdxUtils'
+import { postFilePaths, POSTS_PATH } from '../../utils/mdxUtils'
 
 export default function PostPage({ source, frontMatter }) {
   const content = hydrate(source, { components })
