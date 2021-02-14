@@ -14,7 +14,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "dev:watch": "next-remote-watch ./src/posts",
+    "dev:watch": "next-remote-watch ./data",
     "build": "next build",
     "start": "next start"
   },

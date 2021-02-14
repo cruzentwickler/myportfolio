@@ -1,9 +1,9 @@
-import { AboutMe, Banner, Jobs, Layout, Projects } from '@/components/index'
+import { AboutMe, Hero, Jobs, Layout, Projects } from '@/components/index'
 
 export default function Index() {
   return (
     <Layout>
-      <Banner />
+      <Hero />
       <AboutMe />
       <Jobs />
       <Projects />
