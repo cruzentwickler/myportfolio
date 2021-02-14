@@ -1,9 +1,9 @@
 const Footer = () => {
   return (
     <footer>
-      <div>Section One</div>
-      <div>Section Two</div>
-      <div>Section Three</div>
+      <a href="/">
+        <div>Designed and Built by William Cruz</div>
+      </a>
     </footer>
   )
 }

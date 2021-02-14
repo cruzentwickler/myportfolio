@@ -1,7 +1,7 @@
 export { default as Footer } from '@/components/Footer'
 export { default as Header } from '@/components/Header'
 export { default as Layout } from '@/components/Layout'
-export { default as AboutMe } from '@/components/homePage/AboutMe'
+export { default as About } from '@/components/homePage/About'
 export { default as Hero } from '@/components/homePage/Hero'
 export { default as Jobs } from '@/components/homePage/Jobs'
 export { default as Projects } from '@/components/homePage/Projects'

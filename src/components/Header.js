@@ -1,30 +1,18 @@
 import Link from 'next/link'
+import { navLinks } from '@/config/index'
 
 const Header = () => {
   return (
     <header className="full-bleed">
       <nav>
         <ul>
-          <li>
-            <Link href="/">
-              <a>Link One</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <a>Link Two</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <a>Link Three</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <a>Link Four</a>
-            </Link>
-          </li>
+          {navLinks.map(({ url, name }, i) => (
+            <li key={i}>
+              <Link href={url}>
+                <a>{name}</a>
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
