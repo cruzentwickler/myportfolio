@@ -1,7 +1,25 @@
 import Link from 'next/link'
-import { navLinks } from '@/config/index'
 
 const Header = () => {
+  const navLinks = [
+    {
+      name: 'About',
+      url: '/#about',
+    },
+    {
+      name: 'Experience',
+      url: '/#jobs',
+    },
+    {
+      name: 'Work',
+      url: '/#projects',
+    },
+    {
+      name: 'Contact',
+      url: '/#contact',
+    },
+  ]
+
   return (
     <header className="full-bleed">
       <nav>

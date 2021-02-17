@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import Link from 'next/link'
-import { email } from '@/config/index'
 
 const Hero = () => {
+  const email = 'me@williamcruz.ch'
   return (
     <StyledHeroSection>
       <h1>Hi, my name is</h1>

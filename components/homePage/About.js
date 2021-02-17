@@ -4,13 +4,14 @@ import styled from 'styled-components'
 const About = () => {
   const skills = [
     'JavaScript (ES6+)',
-    'HTML & (S)CSS',
+    'HTML and (S)CSS',
     'React',
     'Node.js',
     'WordPress',
   ]
+
   return (
-    <styledAboutSection>
+    <StyledAboutSection>
       <h2>About Me</h2>
 
       <div>
@@ -26,15 +27,20 @@ const About = () => {
           </p>
           <p>Here are a few technologies I've been working with recently:</p>
         </div>
-        <ul>{skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}</ul>
+        <ul>
+          {skills &&
+            skills.map((skill, i) => {
+              return <li key={i}>{skill}</li>
+            })}
+        </ul>
       </div>
       <div>
         <Image src="/static/images/avatar.jpg" height={500} width={500} />
       </div>
-    </styledAboutSection>
+    </StyledAboutSection>
   )
 }
 
 export default About
 
-const styledAboutSection = styled.section``
+const StyledAboutSection = styled.section``
