@@ -6,7 +6,7 @@ export default function Index({ jobs, projects }) {
     <Layout>
       <Hero />
       <About />
-      <Jobs posts={jobs} />
+      <Jobs jobsData={jobs} />
       <Projects posts={projects} />
     </Layout>
   )
