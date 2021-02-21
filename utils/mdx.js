@@ -1,10 +1,12 @@
 import fs from 'fs'
+
 import matter from 'gray-matter'
+import mdxPrism from 'mdx-prism'
 import path from 'path'
 import readingTime from 'reading-time'
 import renderToString from 'next-mdx-remote/render-to-string'
 
-import MDXComponents from '@/components/MDXComponents'
+import { MDXComponents } from '@/components/index'
 
 const root = process.cwd()
 
@@ -20,7 +22,14 @@ export async function getFileBySlug(type, slug) {
   const { data, content } = matter(source)
   const mdxSource = await renderToString(content, {
     components: MDXComponents,
-    mdxOptions: {},
+    mdxOptions: {
+      remarkPlugins: [
+        require('remark-autolink-headings'),
+        require('remark-slug'),
+        require('remark-code-titles'),
+      ],
+      rehypePlugins: [mdxPrism],
+    },
   })
 
   return {
@@ -42,6 +51,7 @@ export async function getAllFilesFrontMatter(type) {
       path.join(root, 'data', type, postSlug),
       'utf8'
     )
+
     const { data } = matter(source)
 
     return [

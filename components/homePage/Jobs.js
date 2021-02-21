@@ -1,39 +1,30 @@
 import styled from 'styled-components'
 
-const Jobs = ({ jobsData }) => {
+const Jobs = ({ posts }) => {
   return (
     <StyledJobsSection>
       <h2>Where i've Worked</h2>
-
       <div>
-        <StyledTabList>
-          {jobsData &&
-            jobsData.map((post, i) => (
-              <li key={i}>
-                <StyledTabButton>
-                  <span>{post.title}</span>
-                </StyledTabButton>
-              </li>
-            ))}
-        </StyledTabList>
+        {posts.map((frontMatter, i) => {
+          const { date, title, company, location, range, url } = frontMatter
 
-        <StyledTabContent>
-          <h3>
-            <span>Title</span>
-            <span>
-              &nbsp;@&nbsp;
-              <a href="/">Company</a>
-            </span>
-          </h3>
-          <p>Here come your range</p>
-
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. A animi
-            nesciunt officia excepturi harum? Sint nesciunt aliquam nostrum?
-            Adipisci veritatis, vel enim atque rerum omnis dolor blanditiis
-            explicabo fugit accusamus!
-          </p>
-        </StyledTabContent>
+          return (
+            <div key={i}>
+              <div>{date}</div>
+              <div>{title}</div>
+              <div>{company}</div>
+              <div>{location}</div>
+              <div>{range}</div>
+              <div>{url}</div>
+              <div>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Doloribus, eos? Repellat provident ut blanditiis illum magnam,
+                quisquam obcaecati cupiditate quaerat rem fugit, quos nisi, illo
+                facere id dolorum eius accusamus.s
+              </div>
+            </div>
+          )
+        })}
       </div>
     </StyledJobsSection>
   )
@@ -42,9 +33,3 @@ const Jobs = ({ jobsData }) => {
 export default Jobs
 
 const StyledJobsSection = styled.section``
-
-const StyledTabList = styled.ul``
-
-const StyledTabButton = styled.button``
-
-const StyledTabContent = styled.div``

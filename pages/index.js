@@ -1,20 +1,18 @@
-import { About, Hero, Jobs, Layout, Projects } from '@/components/index'
 import { getAllFilesFrontMatter } from '@/utils/mdx'
+import { About, Hero, Jobs, Layout } from '@/components/index'
 
-export default function Index({ jobs, projects }) {
+export default function Index({ jobPosts }) {
   return (
     <Layout>
       <Hero />
       <About />
-      <Jobs jobsData={jobs} />
-      <Projects posts={projects} />
+      <Jobs posts={jobPosts} />
     </Layout>
   )
 }
 
 export async function getStaticProps() {
-  const jobs = await getAllFilesFrontMatter('jobs')
-  const projects = await getAllFilesFrontMatter('projects')
+  const jobPosts = await getAllFilesFrontMatter('jobs')
 
-  return { props: { jobs, projects } }
+  return { props: { jobPosts } }
 }

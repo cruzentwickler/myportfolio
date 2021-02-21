@@ -49,7 +49,7 @@ export default function Layout({ children, ...customMeta }) {
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr min(65ch, calc(100% - 64px)) 1fr;
+  grid-template-columns: 1fr min(90ch, calc(100% - 64px)) 1fr;
   grid-gap: 32px;
 
   > * {
