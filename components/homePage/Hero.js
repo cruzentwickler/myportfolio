@@ -1,32 +1,49 @@
 import styled from 'styled-components'
 import Link from 'next/link'
+import { Button, Heading, Paragraph, Spacer } from '@/styles/index'
+
+const StyledHeroSection = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100%;
+`
+const Container = styled.div`
+  max-width: ${({ maxW }) => maxW};
+  display: grid;
+  grid-gap: 1.2rem;
+  justify-items: start;
+`
 
 const Hero = () => {
-  const email = 'me@williamcruz.ch'
+  const data = {
+    title: 'William Cruz',
+    subTitle: 'I build things for the web.',
+    greeting: 'Hi, my name is',
+    content:
+      "I'm a Front-end Java Script and React developer based in Switzerland, Basel, specializing in building and designing exceptional websites, applications, and everything in between.",
+    email: 'me@williamcruz.ch',
+    btnText: 'Get In Touch',
+  }
+  const { greeting, title, subTitle, content, email, btnText } = data
+
   return (
     <StyledHeroSection>
-      <div>
-        <h1>Hi, my name is</h1>
-        <h2>William Cruz</h2>
-        <h3 className="big-heading">I build things for the web.</h3>
-        <p>
-          I'm a software engineer based in Boston, MA specializing in building
-          (and occasionally designing) exceptional websites, applications, and
-          everything in between.
-        </p>
+      <Container>
+        <Paragraph color="primary">{greeting}</Paragraph>
+        <Heading level="1" color="var(--color-white)">
+          {title}
+        </Heading>
+        <Heading level="2">{subTitle}</Heading>
+        <Paragraph maxW="30rem">{content}</Paragraph>
+        <Spacer size={16} />
         <Link href={`mailto:${email}`}>
-          <a>Get In Touch</a>
+          <Button>{btnText}</Button>
         </Link>
-      </div>
+      </Container>
     </StyledHeroSection>
   )
 }
 
 export default Hero
-
-const StyledHeroSection = styled.section`
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-`

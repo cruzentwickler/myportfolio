@@ -4,20 +4,21 @@ const GlobalStyle = createGlobalStyle`
     :root {
         --color-background:  #0a192f;
         --color-primary: #64ffda;
+        --color-primary-light: rgba(100, 255, 218, 0.1);
         --color-text:  #8892b0;
         --color-white:  #e6f1ff;
 
         --font-mono: 'Roboto Mono', monospace;
         --font-sans: 'Inter', sans-serif;
 
-        --fz-heading: 32px;
-        --fz-lg: 18px;
-        --fz-md: 16px;
-        --fz-sm: 14px;
-        --fz-xl: 20px;
-        --fz-xs: 13px;
-        --fz-xxl: 22px;
         --fz-xxs: 12px;
+        --fz-xs: 13px;
+        --fz-sm: 14px;
+        --fz-md: 16px;
+        --fz-lg: 18px;
+        --fz-xl: 20px;
+        --fz-xxl: 22px;
+        
 
         --nav-height: 6rem;
 
@@ -61,15 +62,22 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        color: var(--color-text);
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
         background-color: var(--color-background);
+        color: var(--color-text);
         font-family: var(--font-sans);
-        
+        font-size: var(--fz-xl);
+        line-height: 1.3;
+        min-height: 100%;
+        overflow-x: hidden;
+        width: 100%;
+
+        @media (max-width: 480px) {
+            font-size: var(--fz-lg);
+        }
     }
 
-    h1 {
-        color:var(--color-primary); 
-    }
 
     a {
         text-decoration: none;
