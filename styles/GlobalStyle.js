@@ -106,8 +106,16 @@ const GlobalStyle = createGlobalStyle`
    }
 
     a {
-        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
         display: inline-block;
+        text-decoration-skip-ink: auto;
+        text-decoration: none;
+        transition: var(--transition);
+    
+        &:hover {
+            color: var(--color-primary);
+        }
     }
 `
 

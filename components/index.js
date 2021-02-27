@@ -1,7 +1,9 @@
+export { default as Email } from '@/components/Email'
 export { default as Footer } from '@/components/Footer'
 export { default as Header } from '@/components/Header'
 export { default as Layout } from '@/components/Layout'
 export { default as MDXComponents } from '@/components/MDXComponents'
+export { default as Side } from '@/components/Side'
 
 export { default as About } from '@/components/homePage/About'
 export { default as Hero } from '@/components/homePage/Hero'
