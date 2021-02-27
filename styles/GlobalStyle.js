@@ -3,27 +3,16 @@ import { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
     :root {
         /* colors */
-        --color-bg:  #111827;
+        --color-bg:  #0a192f;
 
         --color-primary: #6EE7B7;
         --color-primary-100:  rgba(100, 255, 218, 0.1);
-        --color-primary-200: ;
-        --color-primary-300: ;
 
-        --color-secondary: ;
-        --color-secondary-100: ;
-        --color-secondary-200: ;
-        --color-secondary-300: ;
-
-        --color-text:  #9CA3AF;
-        --color-text-100: ;
-        --color-text-200: ;
-        --color-text-300: ;
+        --color-text:   #8892b0;
+        --color-text-100: #a8b2d1;
+        --color-text-200: #ccd6f6;
         
         --color-white:  #F3F4F6;
-        --color-white-100: ;
-        --color-white-200: ;
-        --color-white-300: ;
 
         /* fonts */
         --font-primary: 'Raleway', sans-serif;
@@ -106,6 +95,10 @@ const GlobalStyle = createGlobalStyle`
 
     .hero-heading {
         font-size: var(--base-responsive-heading);
+    }
+
+    h1.hero-heading {
+        color: var(--color-text-200);
     }
 
    p {

@@ -5,8 +5,9 @@ const Wrapper = styled.button`
   border-radius: 5px;
   border: 1px solid var(--color-primary);
   color: var(--color-primary);
-  padding: 1rem 1.5rem;
+  font-family: var(--font-primary);
   font-size: var(--base-responsive-text);
+  padding: 1rem 1.5rem;
 
   &:hover {
     cursor: pointer;
