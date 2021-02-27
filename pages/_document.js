@@ -34,7 +34,7 @@ class MyDocument extends Document {
         <Head>
           <link
             rel="preload"
-            href="/fonts/inter-variable.woff2"
+            href="/fonts/raleway-variable.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"

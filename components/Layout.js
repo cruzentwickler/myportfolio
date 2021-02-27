@@ -40,16 +40,15 @@ export default function Layout({ children, ...customMeta }) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <Header />
+
       <main>{children}</main>
-      <Footer />
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr min(75ch, calc(100% - 64px)) 1fr;
+  grid-template-columns: 1fr min(100ch, calc(100% - 64px)) 1fr;
   grid-gap: 32px;
 
   > * {

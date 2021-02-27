@@ -9,20 +9,15 @@ const StyledHeroSection = styled.section`
   min-height: 100vh;
   width: 100%;
 `
-const Container = styled.div`
-  max-width: ${({ maxW }) => maxW};
-  display: grid;
-  grid-gap: 1.2rem;
-  justify-items: start;
-`
+const Container = styled.div``
 
 const Hero = () => {
   const data = {
-    title: 'William Cruz',
-    subTitle: 'I build things for the web.',
     greeting: 'Hi, my name is',
+    title: 'William Cruz.',
+    subTitle: 'I build things for the web.',
     content:
-      "I'm a Front-end Java Script and React developer based in Switzerland, Basel, specializing in building and designing exceptional websites, applications, and everything in between.",
+      "I'm a Front-end and JavaScript developer based in Switzerland, Basel specializing in building and designing exceptional websites, applications, and everything in between.",
     email: 'me@williamcruz.ch',
     btnText: 'Get In Touch',
   }
@@ -32,12 +27,16 @@ const Hero = () => {
     <StyledHeroSection>
       <Container>
         <Paragraph color="primary">{greeting}</Paragraph>
-        <Heading level="1" color="var(--color-white)">
+        <Spacer size={20} />
+        <Heading level={1} color="var(--color-white)" className="hero-heading">
           {title}
         </Heading>
-        <Heading level="2">{subTitle}</Heading>
-        <Paragraph maxW="30rem">{content}</Paragraph>
-        <Spacer size={16} />
+        <Heading level={2} className="hero-heading">
+          {subTitle}
+        </Heading>
+        <Spacer size={20} />
+        <Paragraph maxW={40}>{content}</Paragraph>
+        <Spacer size={40} />
         <Link href={`mailto:${email}`}>
           <Button>{btnText}</Button>
         </Link>
