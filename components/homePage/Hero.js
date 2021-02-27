@@ -27,16 +27,16 @@ const Hero = () => {
     <StyledHeroSection>
       <Container>
         <Paragraph color="primary">{greeting}</Paragraph>
-        <Spacer size={30} />
+        <Spacer size={20} />
         <Heading level={1} className="hero-heading">
           {title}
         </Heading>
         <Heading level={2} className="hero-heading">
           {subTitle}
         </Heading>
-        <Spacer size={30} />
+        <Spacer size={40} />
         <Paragraph maxW={40}>{content}</Paragraph>
-        <Spacer size={60} />
+        <Spacer size={40} />
         <Link href={`mailto:${email}`}>
           <Button>{btnText}</Button>
         </Link>
