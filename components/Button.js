@@ -7,11 +7,11 @@ const Wrapper = styled.button`
   color: var(--color-primary);
   font-family: var(--font-primary);
   font-size: var(--base-responsive-text);
-  padding: 1rem 1.5rem;
+  padding: var(--padding-btn);
 
   &:hover {
+    background-color: var(--color-primary-t100);
     cursor: pointer;
-    background-color: var(--color-primary-100);
     transition: var(--base-transition);
   }
 `

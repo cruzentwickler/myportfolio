@@ -10,10 +10,10 @@ function getWidth({ axis, size }) {
 
 const Spacer = styled.span`
   display: block;
-  width: ${getWidth}px;
-  min-width: ${getWidth}px;
   height: ${getHeight}px;
   min-height: ${getHeight}px;
+  min-width: ${getWidth}px;
+  width: ${getWidth}px;
 `
 
 export default Spacer

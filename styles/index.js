@@ -1,5 +1,0 @@
-export { default as GlobalStyle } from '@/styles/GlobalStyle'
-export { default as Heading } from '@/styles/Heading'
-export { default as Paragraph } from '@/styles/Paragraph'
-export { default as Button } from '@/styles/Button'
-export { default as Spacer } from '@/styles/Spacer'

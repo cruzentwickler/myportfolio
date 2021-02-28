@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.p`
-  max-width: ${({ maxW }) => `${maxW}ch`};
   color: ${({ color }) =>
     color === 'primary' ? 'var(--color-primary)' : 'inherite'};
+  max-width: ${({ maxW }) => `${maxW}ch`};
 `
 
 const Paragraph = ({ children, ...props }) => {

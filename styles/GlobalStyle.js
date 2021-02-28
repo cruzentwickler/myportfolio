@@ -6,7 +6,10 @@ const GlobalStyle = createGlobalStyle`
         --color-bg:  #0a192f;
 
         --color-primary: #6EE7B7;
-        --color-primary-100:  rgba(100, 255, 218, 0.1);
+        --color-primary-100: ;
+
+        --color-primary-t100:  rgba(100, 255, 218, 0.1);
+        --color-primary-t200:  rgba(100, 255, 218, 0.5);
 
         --color-text:   #8892b0;
         --color-text-100: #a8b2d1;
@@ -21,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
         /* set base values */
         --text-base-size: 16px;
         --base-responsive-text: clamp(1rem, 1.5vw, 1.25rem);
-        --base-responsive-heading: clamp(2rem, 5vw, 4rem);
+        --base-responsive-heading: clamp(2.3rem, 5vw, 4rem);
 
         /* set base transitions */
         --base-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -29,6 +32,9 @@ const GlobalStyle = createGlobalStyle`
         /* line-height */
         --heading-line-height: 1.1;
         --body-line-height: 1.5;
+
+        /* padding */
+        --padding-btn: clamp(0.9rem, 1.5vw, 1rem) clamp(1rem, 1.8vw, 1.5rem);
     }
 
     @font-face {
@@ -116,6 +122,10 @@ const GlobalStyle = createGlobalStyle`
         &:hover {
             color: var(--color-primary);
         }
+    }
+
+    li {
+        list-style: none;
     }
 `
 

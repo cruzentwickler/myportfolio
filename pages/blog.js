@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import { getAllFilesFrontMatter } from '@/utils/mdx'
+import Link from 'next/link'
 
 export default function Blog({ posts }) {
   return (

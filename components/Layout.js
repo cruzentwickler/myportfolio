@@ -1,20 +1,19 @@
-import Head from 'next/head'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 import styled from 'styled-components'
-import { Footer, Header, Email } from '@/components/index'
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr min(100ch, calc(100% - 64px)) 1fr;
-  grid-gap: 32px;
+  grid-column-gap: 32px;
+  grid-template-columns: 1fr min(90ch, calc(100% - 64px)) 1fr;
 
   > * {
     grid-column: 2;
   }
 
   .full-bleed {
-    width: 100%;
     grid-column: 1 / -1;
+    width: 100%;
   }
 `
 
@@ -29,36 +28,37 @@ export default function Layout({ children, ...customMeta }) {
     twitterUsername: '@cruzentwickler',
     ...customMeta,
   }
-  const { title, description, email, image, type, twitterUsername, date } = meta
+
   const router = useRouter()
 
   return (
     <Wrapper>
       <Head>
-        <title>{title}</title>
+        <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
-        <meta content={description} name="description" />
+        <meta content={meta.description} name="description" />
 
         <meta
           property="og:url"
           content={`https://williamcruz.ch${router.asPath}`}
         />
-        <meta property="og:type" content={type} />
-        <meta property="og:site_name" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta property="og:image" content={image} />
+        <meta property="og:type" content={meta.type} />
+        <meta property="og:site_name" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:image" content={meta.image} />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content={twitterUsername} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={image} />
+        <meta name="twitter:site" content={meta.twitterUsername} />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
+        <meta name="twitter:image" content={meta.image} />
 
-        {date && <meta property="article:published_time" content={date} />}
+        {meta.date && (
+          <meta property="article:published_time" content={meta.date} />
+        )}
       </Head>
       <main>{children}</main>
-      <Email email={email} />
     </Wrapper>
   )
 }
